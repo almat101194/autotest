@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name = "Instagram Bot" configfailurepolicy="continue">
+    <listeners>
+        <listener class-name="autotest.core.listener.MyTestResultListener"/>
+    </listeners>
+
+    <test name = "Логин и поиск" group-by-instances="true">
+        <classes>
+            <class name="autotest.tests.regress.LoginTest">
+                <methods>
+                    <include name="login"/>
+                    <include name="clickHomeIcon"/>
+                    <include name="clickAcc"/>
+                    <include name="toClickFollow"/>
+                    <include name="scrollElm"/>
+                    <include name="toClickPost"/>
+                    <include name="likeLastTenPost"/>
+<!--                    <include name="toClickLike"/>-->
+<!--                    <include name="goNextPost"/>-->
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
