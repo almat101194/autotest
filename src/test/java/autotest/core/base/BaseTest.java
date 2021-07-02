@@ -4,6 +4,7 @@ import autotest.core.business.User;
 import autotest.core.manager.ChromeWebDriver;
 import autotest.pages.actions.AuthorizationPageHelper;
 import autotest.pages.actions.CommonHelper;
+import autotest.pages.actions.PageProfHelper;
 import lombok.Getter;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -22,10 +23,12 @@ public class BaseTest {
     // страниц действий
     public CommonHelper commonHelper;
     public AuthorizationPageHelper authorizationPageHelper;
+    public PageProfHelper pageProfHelper;
 
     public BaseTest(){
         commonHelper = PageFactory.initElements(BasePage.getWebDriver(), CommonHelper.class);
         authorizationPageHelper = PageFactory.initElements(BasePage.getWebDriver(), AuthorizationPageHelper.class);
+        pageProfHelper = PageFactory.initElements(BasePage.getWebDriver(), PageProfHelper.class);
     }
 
     public static WebDriver instantiateDriver() {
