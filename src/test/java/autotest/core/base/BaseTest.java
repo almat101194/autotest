@@ -2,10 +2,8 @@ package autotest.core.base;
 
 import autotest.core.business.User;
 import autotest.core.manager.ChromeWebDriver;
-import autotest.pages.actions.CommonElementsHelper;
-import autotest.pages.actions.HomePageHelper;
-import autotest.pages.actions.MainPageHelper;
-import autotest.pages.actions.ProfilePageHelper;
+import autotest.pages.actions.AuthorizationPageHelper;
+import autotest.pages.actions.CommonHelper;
 import lombok.Getter;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -22,16 +20,12 @@ public class BaseTest {
     private static WebDriver driver;
 
     // страниц действий
-    public CommonElementsHelper commonElementsHelper;
-    public MainPageHelper mainPageHelper;
-    public HomePageHelper homePageHelper;
-    public ProfilePageHelper profilePageHelper;
+    public CommonHelper commonHelper;
+    public AuthorizationPageHelper authorizationPageHelper;
 
     public BaseTest(){
-        commonElementsHelper = PageFactory.initElements(BasePage.getWebDriver(), CommonElementsHelper.class);
-        mainPageHelper = PageFactory.initElements(BasePage.getWebDriver(), MainPageHelper.class);
-        homePageHelper = PageFactory.initElements(BasePage.getWebDriver(), HomePageHelper.class);
-        profilePageHelper = PageFactory.initElements(BasePage.getWebDriver(), ProfilePageHelper.class);
+        commonHelper = PageFactory.initElements(BasePage.getWebDriver(), CommonHelper.class);
+        authorizationPageHelper = PageFactory.initElements(BasePage.getWebDriver(), AuthorizationPageHelper.class);
     }
 
     public static WebDriver instantiateDriver() {
@@ -47,7 +41,7 @@ public class BaseTest {
 
     //Входные данные
     @Getter
-    private User addUserName = new User("almatelamanov@mail.ru", "yelamanov.almat");
+    private User addUserName = new User("kavalenko.andrie@mail.ru", "yelamanov.almat");
 
 
     @BeforeSuite

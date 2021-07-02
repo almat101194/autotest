@@ -6,37 +6,33 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 import static autotest.core.base.BaseTest.instantiateDriver;
 
 public class CommonElements {
 
-    public CommonElements() {
+    public CommonElements(){
         PageFactory.initElements(instantiateDriver(), this);
     }
 
     @Getter
-    @DescriptionOfElement("логотип - Instagram")
-    @FindBy(xpath = "//h1[text()='Instagram']")
-    private WebElement logo;
+    @DescriptionOfElement("Иконка дома - Home Icon")
+    @FindBy(xpath = "//a[@href=\"/\"]/*[name()='svg']")
+    private WebElement iconHome;
 
     @Getter
-    @DescriptionOfElement("поле ввода  - Phone number, username, or email")
-    @FindBy(xpath = "//input[@aria-label=\"Phone number, username, or email\" and @name=\"username\"]")
-    private WebElement logInText;
+    @DescriptionOfElement("Save Your Login Info?")
+    @FindBy(xpath = "//div[text()=\"Save Your Login Info?\"]")
+    private WebElement saveLogIn;
 
     @Getter
-    @DescriptionOfElement("поле ввода - Password")
-    @FindBy(xpath = "//input[@aria-label=\"Password\" and @name=\"password\"]")
-    private WebElement passwordText;
+    @DescriptionOfElement("Search")
+    @FindBy(xpath = "//input[@type=\"text\" and @placeholder=\"Search\"]")
+    private WebElement inputSearch;
 
     @Getter
-    @DescriptionOfElement("линка - Sign In")
-    @FindBy(xpath = "//a[@tabindex=\"0\"]/span[text()=\"Sign up\"]")
-    private WebElement signInLink;
-
-    @Getter
-    @DescriptionOfElement("кнопка - Log In")
-    @FindBy(xpath = "//div[text()='Log In']")
-    private WebElement logInBtn;
-
+    @DescriptionOfElement("рандомный акк - Random Account")
+    @FindBy(xpath = "//a[@class=\"-qQT3\"]")
+    private List<WebElement> linkAcc;
 }
