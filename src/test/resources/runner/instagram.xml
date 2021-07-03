@@ -14,13 +14,18 @@
             </class>
             <class name="autotest.tests.regress.ChoiceAccount">
                 <methods>
-                    <include name="seekAndChoiceAcc"/>
+                    <include name="checkValidAcc"/>
                 </methods>
             </class>
             <class name="autotest.tests.regress.ActionOnProfile">
                 <methods>
                     <include name="following"/>
                     <include name="clickPostAndLike"/>
+                </methods>
+            </class>
+            <class name="autotest.tests.regress.LogOut">
+                <methods>
+                    <include name="logOut"/>
                 </methods>
             </class>
         </classes>

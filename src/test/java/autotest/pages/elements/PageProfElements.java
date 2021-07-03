@@ -5,6 +5,8 @@ import lombok.Getter;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.List;
+
 public class PageProfElements extends CommonElements {
 
 //    @Getter
@@ -46,5 +48,10 @@ public class PageProfElements extends CommonElements {
     @DescriptionOfElement("иконка - Close")
     @FindBy(xpath = "//button/div/*[@aria-label=\"Close\" and name()='svg']")
     private WebElement linkIconClose;
+
+    @Getter
+    @DescriptionOfElement("")
+    @FindBy(xpath = "//div[@class=\"v1Nh3 kIKUG  _bz0w\"]")
+    private List<WebElement> elmArrPosts;
 }
 ////div/span/span/button[text()="Follow"]

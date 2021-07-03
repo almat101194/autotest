@@ -27,10 +27,24 @@ public class CommonHelper extends BasePage {
     }
 
     public void toChoiceandomAcc(){
-        waitForElementVisibility(commonElements.getLinkAcc().get(Randomizer.randInt(1, commonElements.getLinkAcc().size()+1)));
+//        waitForElementVisibility(commonElements.getLinkAcc().get(Randomizer.randInt(1, commonElements.getLinkAcc().size()+1)));
         sleep(1000);
         commonElements.getLinkAcc().get(Randomizer.randInt(1, commonElements.getLinkAcc().size()+1)).click();
+        sleep(1000);
+        scrollToWebElement();
         Page.logger.info("Random person was chosen");
+    }
+
+    public void toLogOut(){
+        sleep(2000);
+        waitForElementVisibility(commonElements.getElmProf());
+        commonElements.getElmProf().click();
+        sleep(1000);
+        waitForElementVisibility(commonElements.getLinkLogOut());
+        if(commonElements.getLinkLogOut().isDisplayed()){
+            commonElements.getLinkLogOut().click();
+        }
+
     }
 
 }

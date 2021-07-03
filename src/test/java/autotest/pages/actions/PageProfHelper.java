@@ -23,9 +23,9 @@ public class PageProfHelper extends BasePage {
     }
 
     public void toClickFollow(){
-//        waitForElementToBeClickable(profilePageElements.getFollowBtn());
+        waitForElementToBeClickable(pageProfElements.getBtnFollow());
         waitForElementVisibility(pageProfElements.getBtnFollow());
-        sleep(500);
+        sleep(2000);
         pageProfElements.getBtnFollow().click();
         Page.logger.info("Follow button was clicked!");
         sleep(1000);
@@ -38,6 +38,12 @@ public class PageProfHelper extends BasePage {
             sleep(1000);
         }
         Page.logger.info("Posts were scrolled!");
+    }
+
+    public int toSendAmountPosts(){
+        String text = new Integer(pageProfElements.getElmArrPosts().size()).toString();
+        Page.logger.info(text);
+        return pageProfElements.getElmArrPosts().size();
     }
 
     public void toClickPost(){

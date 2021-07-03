@@ -35,4 +35,14 @@ public class CommonElements {
     @DescriptionOfElement("рандомный акк - Random Account")
     @FindBy(xpath = "//a[@class=\"-qQT3\"]")
     private List<WebElement> linkAcc;
+
+    @Getter
+    @DescriptionOfElement("элемент - Profile")
+    @FindBy(xpath = "//div[@class=\"Fifk5\"]/span")
+    private WebElement elmProf;
+
+    @Getter
+    @DescriptionOfElement("линка - Log Out")
+    @FindBy(xpath = "//div[text()=\"Log Out\"]")
+    private WebElement linkLogOut;
 }
