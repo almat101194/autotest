@@ -24,7 +24,7 @@ public class PageProfHelper extends BasePage {
 
     public void toClickFollow(){
         waitForElementToBeClickable(pageProfElements.getBtnFollow());
-        waitForElementVisibility(pageProfElements.getBtnFollow());
+//        waitForElementVisibility(pageProfElements.getBtnFollow());
         sleep(2000);
         pageProfElements.getBtnFollow().click();
         Page.logger.info("Follow button was clicked!");

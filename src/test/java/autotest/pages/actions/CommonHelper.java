@@ -28,10 +28,11 @@ public class CommonHelper extends BasePage {
 
     public void toChoiceandomAcc(){
 //        waitForElementVisibility(commonElements.getLinkAcc().get(Randomizer.randInt(1, commonElements.getLinkAcc().size()+1)));
+        Page.logger.info(new Integer(commonElements.getLinkAcc().size()).toString());
         sleep(1000);
-        commonElements.getLinkAcc().get(Randomizer.randInt(1, commonElements.getLinkAcc().size()+1)).click();
+        commonElements.getLinkAcc().get(Randomizer.randInt(1, commonElements.getLinkAcc().size())).click();
         sleep(1000);
-        scrollToWebElement();
+//        scrollToWebElement();
         Page.logger.info("Random person was chosen");
     }
 

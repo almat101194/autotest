@@ -2,17 +2,15 @@ package autotest.tests.regress;
 
 import autotest.core.base.BaseTest;
 import autotest.core.base.Page;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class ActionOnProfile extends BaseTest {
-    ActionOnProfile(){
+public class ActionOnProfileThird extends BaseTest {
+    ActionOnProfileThird(){
         super();
     }
-
     @Test
     public void following(){
-            pageProfHelper.toClickFollow();
+        pageProfHelper.toClickFollow();
     }
 
     @Test

@@ -26,12 +26,12 @@ public class PageProfElements extends CommonElements {
 
     @Getter
     @DescriptionOfElement("кнопка - Follow")
-    @FindBy(xpath = "//button[text()=\"Follow\"]")
+    @FindBy(xpath = "//*[text()=\"Follow\"]")
     private WebElement btnFollow;
 
     @Getter
     @DescriptionOfElement("первый пост - POST")
-    @FindBy(xpath = "//div[@class=\"Nnq7C weEfm\"][1]/div[1]/a")
+    @FindBy(xpath = "(//div[@class=\"Nnq7C weEfm\"][1]/div[1]/a)[1]")
     private WebElement elmPost;
 
     @Getter
