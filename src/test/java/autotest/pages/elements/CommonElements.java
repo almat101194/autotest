@@ -16,10 +16,10 @@ public class CommonElements {
         PageFactory.initElements(instantiateDriver(), this);
     }
 
-    @Getter
-    @DescriptionOfElement("Иконка дома - Home Icon")
-    @FindBy(xpath = "//a[@href=\"/\"]/*[name()='svg']")
-    private WebElement iconHome;
+//    @Getter
+//    @DescriptionOfElement("Иконка дома - Home Icon")
+//    @FindBy(xpath = "//a[@href=\"/\"]/*[name()='svg']")
+//    private WebElement iconHome;
 
     @Getter
     @DescriptionOfElement("Save Your Login Info?")

@@ -21,14 +21,14 @@ public class CommonHelper extends BasePage {
 
     public void textInInputSearch(){
        waitForElementVisibility(commonElements.getInputSearch());
-       commonElements.getInputSearch().sendKeys(RandomStringUtils.randomAlphabetic(3)
-               .toLowerCase() + Keys.ARROW_DOWN + Keys.ENTER);
+       commonElements.getInputSearch().sendKeys(RandomStringUtils.randomAlphabetic(3) + Keys.ARROW_DOWN + Keys.ENTER);
         Page.logger.info("Random letters were texted");
         sleep(1000);
     }
 
     public void toChoiceandomAcc(){
         waitForElementVisibility(commonElements.getLinkAcc().get(Randomizer.randInt(1, commonElements.getLinkAcc().size()+1)));
+        sleep(1000);
         commonElements.getLinkAcc().get(Randomizer.randInt(1, commonElements.getLinkAcc().size()+1)).click();
         Page.logger.info("Random person was chosen");
     }

@@ -17,6 +17,12 @@
                     <include name="seekAndChoiceAcc"/>
                 </methods>
             </class>
+            <class name="autotest.tests.regress.ActionOnProfile">
+                <methods>
+                    <include name="following"/>
+                    <include name="clickPostAndLike"/>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>

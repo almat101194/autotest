@@ -13,5 +13,7 @@ public class ChoiceAccount extends BaseTest {
     public void seekAndChoiceAcc(){
         commonHelper.textInInputSearch();
         commonHelper.toChoiceandomAcc();
+        String text = pageProfHelper.getBtnFollowText();
+        Assert.assertEquals(text, "Follow");
     }
 }
