@@ -46,4 +46,22 @@ public class PageProfHelper extends BasePage {
         pageProfElements.getElmPost().click();
         Page.logger.info("First post was clicked");
     }
+
+    public void toLike(){
+        waitForElementToBeClickable(pageProfElements.getLinkIconLike());
+        pageProfElements.getLinkIconLike().click();
+        sleep(1000);
+    }
+
+    public void toNext(){
+        waitForElementVisibility(pageProfElements.getLinkIconNext());
+        waitForElementToBeClickable(pageProfElements.getLinkIconNext());
+        pageProfElements.getLinkIconNext().click();
+    }
+
+    public void toClose(){
+        waitForElementVisibility(pageProfElements.getLinkIconClose());
+        waitForElementToBeClickable(pageProfElements.getLinkIconClose());
+        pageProfElements.getLinkIconClose().click();
+    }
 }

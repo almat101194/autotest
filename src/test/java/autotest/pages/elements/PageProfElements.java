@@ -31,5 +31,20 @@ public class PageProfElements extends CommonElements {
     @DescriptionOfElement("первый пост - POST")
     @FindBy(xpath = "//div[@class=\"Nnq7C weEfm\"][1]/div[1]/a")
     private WebElement elmPost;
+
+    @Getter
+    @DescriptionOfElement("иконка - Like")
+    @FindBy(xpath = "//section/span/button[1]")
+    private WebElement linkIconLike;
+
+    @Getter
+    @DescriptionOfElement("иконка - Next")
+    @FindBy(xpath = "//a[text()=\"Next\"]")
+    private WebElement linkIconNext;
+
+    @Getter
+    @DescriptionOfElement("иконка - Close")
+    @FindBy(xpath = "//button/div/*[@aria-label=\"Close\" and name()='svg']")
+    private WebElement linkIconClose;
 }
 ////div/span/span/button[text()="Follow"]

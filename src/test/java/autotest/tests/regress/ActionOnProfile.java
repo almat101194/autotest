@@ -20,5 +20,13 @@ public class ActionOnProfile extends BaseTest {
     public void clickPostAndLike(){
         pageProfHelper.toScroll();
         pageProfHelper.toClickPost();
+        for(int i = 0; i < 10; i++) {
+            pageProfHelper.toLike();
+            if (i == 9) {
+                continue;
+            }
+            pageProfHelper.toNext();
+        }
+        pageProfHelper.toClose();
     }
 }
