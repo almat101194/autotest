@@ -30,7 +30,7 @@ public class CommonHelper extends BasePage {
      */
     public void textInInputSearch(){
        waitForElementVisibility(commonElements.getInputSearch());
-       commonElements.getInputSearch().sendKeys(RandomStringUtils.randomAlphabetic(3)+ Keys.ENTER);
+       commonElements.getInputSearch().sendKeys(RandomStringUtils.randomAlphabetic(1)+ Keys.ENTER);
        sleep(1000);
        commonElements.getInputSearch().clear();
         Page.logger.info("Random letters were texted");

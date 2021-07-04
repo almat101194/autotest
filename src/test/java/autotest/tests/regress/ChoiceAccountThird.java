@@ -26,5 +26,7 @@ public class ChoiceAccountThird extends BaseTest {
             commonHelper.toChoiceandomAcc();
             num = pageProfHelper.toSendAmountPosts();
         }
+        String text = pageProfHelper.getPostsText();
+        Assert.assertEquals(text, "POSTS");
     }
 }
