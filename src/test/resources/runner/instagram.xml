@@ -7,17 +7,49 @@
 
     <test name = "Логин и поиск" group-by-instances="true">
         <classes>
-            <class name="autotest.tests.regress.LoginTest">
+            <class name="autotest.tests.regress.AuthorizationTest">
                 <methods>
-                    <include name="login"/>
-                    <include name="clickHomeIcon"/>
-                    <include name="clickAcc"/>
-                    <include name="toClickFollow"/>
-                    <include name="scrollElm"/>
-                    <include name="toClickPost"/>
-                    <include name="likeLastTenPost"/>
-<!--                    <include name="toClickLike"/>-->
-<!--                    <include name="goNextPost"/>-->
+                    <include name="toAuthorization"/>
+                </methods>
+            </class>
+            <class name="autotest.tests.regress.ChoiceAccount">
+                <methods>
+                    <include name="checkValidAcc"/>
+                </methods>
+            </class>
+            <class name="autotest.tests.regress.ActionOnProfile">
+                <methods>
+                    <include name="following"/>
+                    <include name="clickPostAndLike"/>
+                </methods>
+            </class>
+
+            <class name="autotest.tests.regress.ChoiceAccountSecond">
+                <methods>
+                    <include name="checkValidAcc"/>
+                </methods>
+            </class>
+            <class name="autotest.tests.regress.ActionOnProfileSecond">
+                <methods>
+                    <include name="following"/>
+                    <include name="clickPostAndLike"/>
+                </methods>
+            </class>
+
+            <class name="autotest.tests.regress.ChoiceAccountThird">
+                <methods>
+                    <include name="checkValidAcc"/>
+                </methods>
+            </class>
+            <class name="autotest.tests.regress.ActionOnProfileThird">
+                <methods>
+                    <include name="following"/>
+                    <include name="clickPostAndLike"/>
+                </methods>
+            </class>
+            <class name="autotest.tests.regress.LogOut">
+                <methods>
+                    <include name="logOut"/>
                 </methods>
             </class>
         </classes>
