@@ -1,21 +1,18 @@
 package autotest.tests.regress;
 
 import autotest.core.base.BaseTest;
-import org.testng.Assert;
 import org.testng.annotations.Test;
+
+/**
+ * Класс - Тест проверяющи функционал проверяющий правильность аккаунта на количество постов(не менее 10 штук)
+ * в противном случае набирает занова рандомного пользователя до тех про пока условие не выполнится.
+ * Первая итерация
+ */
 
 public class ChoiceAccount extends BaseTest {
     ChoiceAccount(){
         super();
     }
-
-//    @Test
-//    public void seekAndChoiceAcc(){
-//        commonHelper.textInInputSearch();
-//        commonHelper.toChoiceandomAcc();
-//        String text = pageProfHelper.getBtnFollowText();
-//        Assert.assertEquals(text, "Follow");
-//    }
 
     @Test
     public void checkValidAcc(){
@@ -23,7 +20,5 @@ public class ChoiceAccount extends BaseTest {
             commonHelper.textInInputSearch();
             commonHelper.toChoiceandomAcc();
         }while (pageProfHelper.toSendAmountPosts() < 10);
-//        String text = pageProfHelper.getBtnFollowText();
-//        Assert.assertEquals(text, "Follow");
     }
 }

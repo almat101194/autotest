@@ -5,6 +5,12 @@ import lombok.Getter;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+/**
+ * Класс описывающий WebElement - ы страницы авторизации, такие как:
+ * Ввод логина (Phone number, username, or email)
+ * Ввод пороля (Password)
+ * Кнопка входа на страницу
+ */
 public class AuthorizationPageElements extends CommonElements {
 
     @Getter

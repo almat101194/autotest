@@ -8,6 +8,7 @@ import autotest.pages.actions.PageProfHelper;
 import lombok.Getter;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
@@ -44,7 +45,7 @@ public class BaseTest {
 
     //Входные данные
     @Getter
-    private User addUserName = new User("almatelamanov@mail.ru", "yelamanov.almat");
+    private User addUserName = new User("kavalenko.andrie@mail.ru", "yelamanov.almat");
 
 
     @BeforeSuite
@@ -65,13 +66,13 @@ public class BaseTest {
         Page.logger.info("RUN test method: "+ testName);
     }
 
-//    @AfterSuite
-//    public void tearDown() {
-//        if (driver!= null) {
-//            driver.quit();
-//        }
-//
-//        Page.logger.info("test execution completed.");
-//
-//    }
+    @AfterSuite
+    public void tearDown() {
+        if (driver!= null) {
+            driver.quit();
+        }
+
+        Page.logger.info("test execution completed.");
+
+    }
 }

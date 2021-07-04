@@ -7,6 +7,10 @@ import autotest.pages.elements.CommonElements;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.Keys;
 
+/**
+ * Описываает действия всех WebElement-ов содержащий в каждой странице Инстаграмма
+ */
+
 public class CommonHelper extends BasePage {
     private final CommonElements commonElements = new CommonElements();
     public CommonHelper(){

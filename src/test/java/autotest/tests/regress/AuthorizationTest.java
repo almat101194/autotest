@@ -4,6 +4,10 @@ import autotest.core.base.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+/**
+ * Класс - Тест проверяющи функционал авторизации и вход на гостевую страницу Инстаграмма
+ */
+
 public class AuthorizationTest extends BaseTest {
     AuthorizationTest(){
         super();

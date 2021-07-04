@@ -7,12 +7,12 @@ import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
 
-public class PageProfElements extends CommonElements {
+/**
+ * Класс содержит все WebElement-ы профиля аккаунта пользователя,
+ * такие как кнопка Подписки, элемент Поста, иконка Нравится, иконка перехода на новый Пост и т.д.
+ */
 
-//    @Getter
-//    @DescriptionOfElement("элемент - Followers")
-//    @FindBy(xpath = "//a[text()=\" followers\"]")
-//    private WebElement elmFollowers;
+public class PageProfElements extends CommonElements {
 
     @Getter
     @DescriptionOfElement("тэг - Message")

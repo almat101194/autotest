@@ -6,6 +6,11 @@ import autotest.core.business.User;
 import autotest.pages.elements.AuthorizationPageElements;
 import org.openqa.selenium.Keys;
 
+
+/**
+ * Класс наследуемый от абстрактного класса BasePage,
+ * описывает действия над WebElement-ми страницы авторизации
+ */
 public class AuthorizationPageHelper extends BasePage {
     private final AuthorizationPageElements authorizationPageElements = new AuthorizationPageElements();
     public AuthorizationPageHelper(){

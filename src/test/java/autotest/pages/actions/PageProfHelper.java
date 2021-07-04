@@ -4,6 +4,10 @@ import autotest.core.base.BasePage;
 import autotest.core.base.Page;
 import autotest.pages.elements.PageProfElements;
 
+/**
+ * Класс описывает действия над WebElement-ми профиля аккаунта пользователя
+ */
+
 public class PageProfHelper extends BasePage {
     private final PageProfElements pageProfElements = new PageProfElements();
     public PageProfHelper(){

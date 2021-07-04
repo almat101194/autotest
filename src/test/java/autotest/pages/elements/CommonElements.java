@@ -10,16 +10,15 @@ import java.util.List;
 
 import static autotest.core.base.BaseTest.instantiateDriver;
 
+/**
+ * Класс описывает общие WebElement-ы всех страниц Instagram
+ */
+
 public class CommonElements {
 
     public CommonElements(){
         PageFactory.initElements(instantiateDriver(), this);
     }
-
-//    @Getter
-//    @DescriptionOfElement("Иконка дома - Home Icon")
-//    @FindBy(xpath = "//a[@href=\"/\"]/*[name()='svg']")
-//    private WebElement iconHome;
 
     @Getter
     @DescriptionOfElement("Save Your Login Info?")
