@@ -27,4 +27,9 @@ public class AuthorizationPageElements extends CommonElements {
     @DescriptionOfElement("кнопка - Log In")
     @FindBy(xpath = "//div[text()='Log In']")
     private WebElement btnLogIn;
+
+    @Getter
+    @DescriptionOfElement("логотип - Instagram")
+    @FindBy(xpath = "//h1[text()=\"Instagram\"]")
+    private WebElement elmLogo;
 }

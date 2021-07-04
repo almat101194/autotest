@@ -32,4 +32,9 @@ public class AuthorizationPageHelper extends BasePage {
         Page.logger.info("Log In button was clicked");
         return new CommonHelper();
     }
+
+    public String getLogoText(){
+        waitForElementVisibility(authorizationPageElements.getElmLogo());
+        return authorizationPageElements.getElmLogo().getText();
+    }
 }

@@ -45,7 +45,7 @@ public class BaseTest {
 
     //Входные данные
     @Getter
-    private User addUserName = new User("kavalenko.andrie@mail.ru", "yelamanov.almat");
+    private User addUserName = new User("jonifer.snowden@mail.ru", "yelamanov.almat");
 
 
     @BeforeSuite

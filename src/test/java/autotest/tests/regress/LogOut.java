@@ -1,6 +1,7 @@
 package autotest.tests.regress;
 
 import autotest.core.base.BaseTest;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 /**
@@ -18,5 +19,7 @@ public class LogOut extends BaseTest {
     @Test
     public void logOut(){
         commonHelper.toLogOut();
+        String text =  authorizationPageHelper.getLogoText();
+        Assert.assertEquals(text, "Instagram");
     }
 }

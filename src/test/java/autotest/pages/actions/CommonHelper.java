@@ -54,10 +54,12 @@ public class CommonHelper extends BasePage {
         sleep(2000);
         waitForElementVisibility(commonElements.getElmProf());
         commonElements.getElmProf().click();
+        Page.logger.info("Profile icon was clicked!");
         sleep(1000);
         waitForElementVisibility(commonElements.getLinkLogOut());
         if(commonElements.getLinkLogOut().isDisplayed()){
             commonElements.getLinkLogOut().click();
+            Page.logger.info("Log out was clicked!");
         }
 
     }
