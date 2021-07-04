@@ -53,5 +53,9 @@ public class PageProfElements extends CommonElements {
     @DescriptionOfElement("")
     @FindBy(xpath = "//div[@class=\"v1Nh3 kIKUG  _bz0w\"]")
     private List<WebElement> elmArrPosts;
+
+    @Getter
+    @DescriptionOfElement("")
+    @FindBy(xpath = "//*[text()=\"Posts\"]")
+    private WebElement elmSpanPosts;
 }
-////div/span/span/button[text()="Follow"]

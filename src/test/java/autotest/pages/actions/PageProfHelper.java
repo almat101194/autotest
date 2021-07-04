@@ -3,6 +3,9 @@ package autotest.pages.actions;
 import autotest.core.base.BasePage;
 import autotest.core.base.Page;
 import autotest.pages.elements.PageProfElements;
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebElement;
 
 /**
  * Класс описывает действия над WebElement-ми профиля аккаунта пользователя
@@ -28,7 +31,8 @@ public class PageProfHelper extends BasePage {
      * Получить количество постов на профиле аккаунта для определение валидности аккаунта для дальнейших действий
      */
     public int toSendAmountPosts(){
-        String text = new Integer(pageProfElements.getElmArrPosts().size()).toString();
+        sleep(1000);
+        String text = Integer.toString(pageProfElements.getElmArrPosts().size());
         Page.logger.info(text);
         return pageProfElements.getElmArrPosts().size();
     }
@@ -68,5 +72,10 @@ public class PageProfHelper extends BasePage {
         waitForElementVisibility(pageProfElements.getLinkIconClose());
         waitForElementToBeClickable(pageProfElements.getLinkIconClose());
         pageProfElements.getLinkIconClose().click();
+    }
+
+    public String getPostsText(){
+        waitForElementVisibility(pageProfElements.getElmSpanPosts());
+        return pageProfElements.getElmSpanPosts().getText();
     }
 }

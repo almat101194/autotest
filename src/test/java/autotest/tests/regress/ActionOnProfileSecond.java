@@ -22,7 +22,6 @@ public class ActionOnProfileSecond extends BaseTest {
 
     @Test
     public void clickPostAndLike(){
-//        pageProfHelper.toScroll();
         pageProfHelper.toClickPost();
         for(int i = 0; i < 10; i++) {
             pageProfHelper.toLike();

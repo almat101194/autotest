@@ -17,7 +17,6 @@ public class CommonHelper extends BasePage {
         super();
     }
 
-
     /**
      * Возвращает значение "Save Your Login Info?" для проверки правильности авторизации
      */
@@ -31,9 +30,11 @@ public class CommonHelper extends BasePage {
      */
     public void textInInputSearch(){
        waitForElementVisibility(commonElements.getInputSearch());
-       commonElements.getInputSearch().sendKeys(RandomStringUtils.randomAlphabetic(3) + Keys.ARROW_DOWN + Keys.ENTER);
+       commonElements.getInputSearch().sendKeys(RandomStringUtils.randomAlphabetic(3)+ Keys.ENTER);
+       sleep(1000);
+       commonElements.getInputSearch().clear();
         Page.logger.info("Random letters were texted");
-        sleep(1000);
+        sleep(2000);
     }
 
     /**
@@ -42,8 +43,8 @@ public class CommonHelper extends BasePage {
     public void toChoiceandomAcc(){
         Page.logger.info(new Integer(commonElements.getLinkAcc().size()).toString());
         sleep(1000);
-        commonElements.getLinkAcc().get(Randomizer.randInt(1, commonElements.getLinkAcc().size())).click();
-        sleep(1000);
+        commonElements.getLinkAcc().get(1).click();
+        sleep(2000);
         Page.logger.info("Random person was chosen");
     }
 

@@ -1,6 +1,8 @@
 package autotest.tests.regress;
 
 import autotest.core.base.BaseTest;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 /**
@@ -14,10 +16,15 @@ public class ChoiceAccountThird extends BaseTest {
         super();
     }
     @Test
-    public void checkValidAcc(){
-        do{
+    public void checkValidAcc() throws InterruptedException {
+        commonHelper.textInInputSearch();
+        commonHelper.toChoiceandomAcc();
+        int num = pageProfHelper.toSendAmountPosts();
+        while (!((num >= 10))){
+            Thread.sleep(1000);
             commonHelper.textInInputSearch();
             commonHelper.toChoiceandomAcc();
-        }while (pageProfHelper.toSendAmountPosts() < 10);
+            num = pageProfHelper.toSendAmountPosts();
+        }
     }
 }
