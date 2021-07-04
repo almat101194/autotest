@@ -18,41 +18,41 @@
                     <include name="checkValidAcc"/>
                 </methods>
             </class>
-<!--            <class name="autotest.tests.regress.ActionOnProfile">-->
-<!--                <methods>-->
-<!--                    <include name="following"/>-->
-<!--                    <include name="clickPostAndLike"/>-->
-<!--                </methods>-->
-<!--            </class>-->
+            <class name="autotest.tests.regress.ActionOnProfile">
+                <methods>
+                    <include name="following"/>
+                    <include name="clickPostAndLike"/>
+                </methods>
+            </class>
 
             <class name="autotest.tests.regress.ChoiceAccountSecond">
                 <methods>
                     <include name="checkValidAcc"/>
                 </methods>
             </class>
-<!--            <class name="autotest.tests.regress.ActionOnProfileSecond">-->
-<!--                <methods>-->
-<!--                    <include name="following"/>-->
-<!--                    <include name="clickPostAndLike"/>-->
-<!--                </methods>-->
-<!--            </class>-->
+            <class name="autotest.tests.regress.ActionOnProfileSecond">
+                <methods>
+                    <include name="following"/>
+                    <include name="clickPostAndLike"/>
+                </methods>
+            </class>
 
             <class name="autotest.tests.regress.ChoiceAccountThird">
                 <methods>
                     <include name="checkValidAcc"/>
                 </methods>
             </class>
-<!--            <class name="autotest.tests.regress.ActionOnProfileThird">-->
-<!--                <methods>-->
-<!--                    <include name="following"/>-->
-<!--                    <include name="clickPostAndLike"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--            <class name="autotest.tests.regress.LogOut">-->
-<!--                <methods>-->
-<!--                    <include name="logOut"/>-->
-<!--                </methods>-->
-<!--            </class>-->
+            <class name="autotest.tests.regress.ActionOnProfileThird">
+                <methods>
+                    <include name="following"/>
+                    <include name="clickPostAndLike"/>
+                </methods>
+            </class>
+            <class name="autotest.tests.regress.LogOut">
+                <methods>
+                    <include name="logOut"/>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>

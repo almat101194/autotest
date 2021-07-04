@@ -45,7 +45,7 @@ public class BaseTest {
 
     //Входные данные
     @Getter
-    private User addUserName = new User("almatelamanov@mail.ru", "yelamanov.almat");
+    private User addUserName = new User("madina.abilkasivo.97@bk.ru", "warcraft3refoe");
 
 
     @BeforeSuite
@@ -66,13 +66,13 @@ public class BaseTest {
         Page.logger.info("RUN test method: "+ testName);
     }
 
-//    @AfterSuite
-//    public void tearDown() {
-//        if (driver!= null) {
-//            driver.quit();
-//        }
-//
-//        Page.logger.info("test execution completed.");
-//
-//    }
+    @AfterSuite
+    public void tearDown() {
+        if (driver!= null) {
+            driver.quit();
+        }
+
+        Page.logger.info("test execution completed.");
+
+    }
 }
