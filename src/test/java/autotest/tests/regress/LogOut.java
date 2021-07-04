@@ -12,6 +12,9 @@ public class LogOut extends BaseTest {
         super();
     }
 
+    /**
+     * Выход из аккаунта после
+     */
     @Test
     public void logOut(){
         commonHelper.toLogOut();

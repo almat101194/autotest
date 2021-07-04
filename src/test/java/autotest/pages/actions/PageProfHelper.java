@@ -7,49 +7,35 @@ import autotest.pages.elements.PageProfElements;
 /**
  * Класс описывает действия над WebElement-ми профиля аккаунта пользователя
  */
-
 public class PageProfHelper extends BasePage {
     private final PageProfElements pageProfElements = new PageProfElements();
     public PageProfHelper(){
         super();
     }
 
-    public String getBtnFollowText(){
-        waitForElementVisibility(pageProfElements.getBtnFollow());
-        Page.logger.info("Follow test was taken!");
-        return pageProfElements.getBtnFollow().getText();
-    }
-
-    public String getDivMessageText(){
-        waitForElementVisibility(pageProfElements.getDivMessage());
-        Page.logger.info("Message text was taken!");
-        return pageProfElements.getDivMessage().getText();
-    }
-
+    /**
+     * Функция для нажатие кнопки Follow и подписки на пользователя
+     */
     public void toClickFollow(){
         waitForElementToBeClickable(pageProfElements.getBtnFollow());
-//        waitForElementVisibility(pageProfElements.getBtnFollow());
         sleep(2000);
         pageProfElements.getBtnFollow().click();
         Page.logger.info("Follow button was clicked!");
         sleep(1000);
     }
 
-    public void toScroll() {
-        for(int i = 0; i < 2; i++){
-            waitForElementVisibility(pageProfElements.getElmDiv());
-            scrollToWebElement();
-            sleep(1000);
-        }
-        Page.logger.info("Posts were scrolled!");
-    }
-
+    /**
+     * Получить количество постов на профиле аккаунта для определение валидности аккаунта для дальнейших действий
+     */
     public int toSendAmountPosts(){
         String text = new Integer(pageProfElements.getElmArrPosts().size()).toString();
         Page.logger.info(text);
         return pageProfElements.getElmArrPosts().size();
     }
 
+    /**
+     * Открывает первый пост на профиле аккаунта
+     */
     public void toClickPost(){
         waitForElementVisibility(pageProfElements.getElmPost());
         sleep(2000);
@@ -57,18 +43,27 @@ public class PageProfHelper extends BasePage {
         Page.logger.info("First post was clicked");
     }
 
+    /**
+     * Лайкает посты
+     */
     public void toLike(){
         waitForElementToBeClickable(pageProfElements.getLinkIconLike());
         pageProfElements.getLinkIconLike().click();
         sleep(1000);
     }
 
+    /**
+     * Переход на следующии пост
+     */
     public void toNext(){
         waitForElementVisibility(pageProfElements.getLinkIconNext());
         waitForElementToBeClickable(pageProfElements.getLinkIconNext());
         pageProfElements.getLinkIconNext().click();
     }
 
+    /**
+     * Закрывает пост
+     */
     public void toClose(){
         waitForElementVisibility(pageProfElements.getLinkIconClose());
         waitForElementToBeClickable(pageProfElements.getLinkIconClose());

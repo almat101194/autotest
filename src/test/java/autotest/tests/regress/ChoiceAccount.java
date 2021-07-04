@@ -14,6 +14,11 @@ public class ChoiceAccount extends BaseTest {
         super();
     }
 
+    /**
+     * Проверяет количество постов на профиле аккаунта
+     * В случае не валидности количество постов продолжает
+     * Пойск аккаунта
+     */
     @Test
     public void checkValidAcc(){
         do{

@@ -17,12 +17,18 @@ public class CommonHelper extends BasePage {
         super();
     }
 
+
+    /**
+     * Возвращает значение "Save Your Login Info?" для проверки правильности авторизации
+     */
     public String checkForInvalidAuthorize(){
         waitForElementVisibility(commonElements.getSaveLogIn());
         return commonElements.getSaveLogIn().getText();
     }
 
-
+    /**
+     * Набор в Search поискавике рандомного текста для нахождение рандомного пользователя
+     */
     public void textInInputSearch(){
        waitForElementVisibility(commonElements.getInputSearch());
        commonElements.getInputSearch().sendKeys(RandomStringUtils.randomAlphabetic(3) + Keys.ARROW_DOWN + Keys.ENTER);
@@ -30,16 +36,20 @@ public class CommonHelper extends BasePage {
         sleep(1000);
     }
 
+    /**
+     * Кликает на рандомного пользователя
+     */
     public void toChoiceandomAcc(){
-//        waitForElementVisibility(commonElements.getLinkAcc().get(Randomizer.randInt(1, commonElements.getLinkAcc().size()+1)));
         Page.logger.info(new Integer(commonElements.getLinkAcc().size()).toString());
         sleep(1000);
         commonElements.getLinkAcc().get(Randomizer.randInt(1, commonElements.getLinkAcc().size())).click();
         sleep(1000);
-//        scrollToWebElement();
         Page.logger.info("Random person was chosen");
     }
 
+    /**
+     * Выход из аккаунта
+     */
     public void toLogOut(){
         sleep(2000);
         waitForElementVisibility(commonElements.getElmProf());

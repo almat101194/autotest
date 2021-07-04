@@ -17,6 +17,9 @@ public class AuthorizationPageHelper extends BasePage {
         super();
     }
 
+    /**
+     * Авторизация для входа в аккаунт
+     */
     public CommonHelper toAuthorize(User user){
         waitForElementVisibility(authorizationPageElements.getInputLogIn());
         authorizationPageElements.getInputLogIn().sendKeys(user.getEmail()+ Keys.ENTER);

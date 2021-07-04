@@ -15,11 +15,19 @@ public class ActionOnProfile extends BaseTest {
         super();
     }
 
+    /**
+     * Тест подписки на аккаунт
+     */
     @Test
     public void following(){
             pageProfHelper.toClickFollow();
     }
 
+    /**
+     * Кликает на пост и проходит под итераций до 10
+     * после достижение 10-ой итераций выходит из цикла и
+     * закрывает пост
+     */
     @Test
     public void clickPostAndLike(){
         pageProfHelper.toClickPost();
